@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{78DF4EEE-2724-4E9C-A827-C7785237A4A6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Recuperatorio.Windows</RootNamespace>
+    <AssemblyName>Recuperatorio.Windows</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClaseEstatica\ClaseEstatica.cs" />
+    <Compile Include="FrmAutores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAutores.Designer.cs">
+      <DependentUpon>FrmAutores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditorial.Designer.cs">
+      <DependentUpon>FrmEditorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditorialAE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditorialAE.Designer.cs">
+      <DependentUpon>FrmEditorialAE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLibros.Designer.cs">
+      <DependentUpon>FrmLibros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuarios.Designer.cs">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAutores.resx">
+      <DependentUpon>FrmAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditorial.resx">
+      <DependentUpon>FrmEditorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditorialAE.resx">
+      <DependentUpon>FrmEditorialAE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLibros.resx">
+      <DependentUpon>FrmLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuarios.resx">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_36px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_window_36px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Recuperatorio.Entidades\Recuperatorio.Entidades.csproj">
+      <Project>{A7593FCB-4A26-42E7-8402-A3F33101695D}</Project>
+      <Name>Recuperatorio.Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Recuperatorio.Servicio\Recuperatorio.Servicio.csproj">
+      <Project>{F3774510-65A4-48C8-B25C-CF52AFB3BBE2}</Project>
+      <Name>Recuperatorio.Servicio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok_36px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_window_48px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
